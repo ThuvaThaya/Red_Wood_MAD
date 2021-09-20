@@ -18,5 +18,17 @@ public class Login extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+    public void onClickViewRoomOne(View view) {
+        Intent intent = new Intent(this, ViewRoomActivity.class);
+        startActivity(intent);
+    }
+    public void onClickRegister(View view) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
+    }
 
 }

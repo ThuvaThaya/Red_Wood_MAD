@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 } finally {
 
                     Intent i = new Intent(MainActivity.this,
-                            MenuActivity.class);
+                            Login.class);
                     startActivity(i);
                     finish();
                 }

@@ -17,4 +17,12 @@ public class ViewRoomAdmin extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickAddRoom(View view) {
+        Intent intent = new Intent(this, AddRoomActivity.class);
+        startActivity(intent);
+    }
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
 }

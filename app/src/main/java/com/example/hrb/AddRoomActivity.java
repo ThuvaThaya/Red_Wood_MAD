@@ -18,4 +18,8 @@ public class AddRoomActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickViewRoomAdmin(View view) {
+        Intent intent = new Intent(this, ViewRoomAdmin.class);
+        startActivity(intent);
+    }
 }

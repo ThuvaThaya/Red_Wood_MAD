@@ -52,4 +52,8 @@ public class BookingDetailsActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickViewRoomOne(View view) {
+        Intent intent = new Intent(this, ViewRoomActivity.class);
+        startActivity(intent);
+    }
 }

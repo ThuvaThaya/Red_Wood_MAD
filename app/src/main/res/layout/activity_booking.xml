@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:background="?attr/homeAsUpIndicator"
         app:backgroundTint="@color/black"
-        android:onClick="onClickBack"
+        android:onClick="onClickViewRoomSingle"
         android:layout_alignParentLeft="true" />
 
     <ScrollView
@@ -193,6 +193,7 @@
                             android:layout_margin="10sp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/Yellow"
+                            android:onClick="onClickViewRoomSingle"
                             android:text="@string/btncancel"
                             android:textColor="@color/white"
                             app:cornerRadius="20dp" />
@@ -204,6 +205,7 @@
                             android:layout_margin="10sp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/Yellow"
+                            android:onClick="onClickPayment"
                             android:text="@string/book"
                             android:textColor="@color/white"
                             app:cornerRadius="20dp" />

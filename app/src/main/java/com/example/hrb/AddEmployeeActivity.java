@@ -17,4 +17,9 @@ public class AddEmployeeActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+
+    public void onClickEmployeeDetails(View view) {
+        Intent intent = new Intent(this, EmployeeDetailsActivity.class);
+        startActivity(intent);
+    }
 }

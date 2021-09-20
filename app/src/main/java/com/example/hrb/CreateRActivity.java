@@ -18,4 +18,12 @@ public class CreateRActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickRoomCategoryView(View view) {
+        Intent intent = new Intent(this, RoomCategoryViewActivity.class);
+        startActivity(intent);
+    }
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
 }

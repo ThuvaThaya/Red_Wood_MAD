@@ -78,17 +78,33 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+<!--    <TextView-->
+<!--        android:id="@+id/emp_5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="4dp"-->
+<!--        android:layout_marginRight="4dp"-->
+<!--        android:layout_marginBottom="656dp"-->
+<!--        android:text="Add"-->
+<!--        android:textColor="#fbc02d"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
     <TextView
-        android:id="@+id/emp_5"
+        android:id="@+id/AddRoomCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="656dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="32dp"
         android:text="Add"
-        android:textColor="#fbc02d"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="15sp"
+        android:onClick="onClickAddEmployee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnback"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/emp6"
@@ -461,15 +477,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="53dp"
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="332dp"
-        android:layout_marginRight="332dp"
-        android:layout_marginBottom="640dp"
-        android:text="@string/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:background="?attr/homeAsUpIndicator"
+        android:onClick="onClickHome"
+        app:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="5dp"
+        tools:ignore="UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

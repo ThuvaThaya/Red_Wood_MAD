@@ -8,20 +8,20 @@
     tools:context=".PaymentActivity">
 
 
-    <Button
-        android:id="@+id/btnback"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="5dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="?attr/homeAsUpIndicator"
-        app:backgroundTint="@color/black"
-        android:onClick="onClickBack"
-        android:layout_alignParentLeft="true"
-        tools:ignore="OnClick,UsingOnClickInXml"
-        android:layout_marginStart="5dp" />
+<!--    <Button-->
+<!--        android:id="@+id/btnback"-->
+<!--        android:layout_width="35dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="?attr/homeAsUpIndicator"-->
+<!--        app:backgroundTint="@color/black"-->
+<!--        android:onClick="onClickBack"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        tools:ignore="OnClick,UsingOnClickInXml"-->
+<!--        android:layout_marginStart="5dp" />-->
 
 
     <LinearLayout
@@ -155,17 +155,59 @@
                     android:padding="10dp"
                     android:textColorHint="@color/black" />
 
-                <Button
-                    android:id="@+id/btnPay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_margin="10sp"
-                    android:backgroundTint="@color/Yellow"
-                    android:fontFamily="@font/taviraj_extrabold"
-                    android:text="@string/pay"
-                    android:textColor="@color/white"
-                    app:cornerRadius="20dp" />
+                <!--                <Button-->
+                <!--                    android:id="@+id/btnPay"-->
+                <!--                    android:layout_width="124dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_centerHorizontal="true"-->
+                <!--                    android:layout_margin="10sp"-->
+                <!--                    android:backgroundTint="@color/Yellow"-->
+                <!--                    android:fontFamily="@font/taviraj_extrabold"-->
+                <!--                    android:text="@string/pay"-->
+                <!--                    android:textColor="@color/white"-->
+                <!--                    app:cornerRadius="20dp" />-->
+
+                <!--                <Button-->
+                <!--                    android:id="@+id/btnPay2"-->
+                <!--                    android:layout_width="130dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_centerHorizontal="true"-->
+                <!--                    android:layout_margin="10sp"-->
+                <!--                    android:backgroundTint="@color/Yellow"-->
+                <!--                    android:fontFamily="@font/taviraj_extrabold"-->
+                <!--                    android:text="@string/pay"-->
+                <!--                    android:textColor="@color/white"-->
+                <!--                    app:cornerRadius="20dp" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/Yellow"
+                        android:onClick="onClickBooking"
+                        android:text="@string/btncancel"
+                        android:textColor="@color/white"
+                        app:cornerRadius="20dp" />
+
+                    <Button
+                        android:id="@+id/btnBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/Yellow"
+                        android:onClick="onClickViewRoomOne"
+                        android:text="@string/pay"
+                        android:textColor="@color/white"
+                        app:cornerRadius="20dp" />
+                </LinearLayout>
 
             </LinearLayout>
 

@@ -17,4 +17,8 @@ public class ViewRoomActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickViewRoomSingle(View view) {
+        Intent intent = new Intent(this, ViewRoomSingle.class);
+        startActivity(intent);
+    }
 }

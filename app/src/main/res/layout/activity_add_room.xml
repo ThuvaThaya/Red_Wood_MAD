@@ -205,6 +205,7 @@
                             android:layout_weight="1"
                             android:backgroundTint="#F1BB0E"
                             android:text="@string/add"
+                            android:onClick="onClickViewRoomAdmin"
                             android:textColor="@color/white"
                             app:cornerRadius="20dp" />
 

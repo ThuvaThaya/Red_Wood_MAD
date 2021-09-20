@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:background="?attr/homeAsUpIndicator"
         app:backgroundTint="@color/black"
-        android:onClick="onClickBack"
+        android:onClick="onClickEmployeeDetails"
         android:layout_alignParentLeft="true"
         tools:ignore="MissingConstraints" />
 
@@ -183,6 +183,7 @@
         android:layout_marginBottom="84dp"
         android:text="@string/submit"
         app:cornerRadius="20dp"
+        android:onClick="onClickEmployeeDetails"
         android:backgroundTint="@color/Yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

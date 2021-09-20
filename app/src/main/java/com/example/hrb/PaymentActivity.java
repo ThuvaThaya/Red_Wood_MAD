@@ -18,4 +18,12 @@ public class PaymentActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickViewRoomOne(View view) {
+        Intent intent = new Intent(this, ViewRoomActivity.class);
+        startActivity(intent);
+    }
+    public void onClickBooking(View view) {
+        Intent intent = new Intent(this, BookingActivity.class);
+        startActivity(intent);
+    }
 }

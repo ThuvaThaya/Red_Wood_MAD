@@ -19,5 +19,9 @@ public class RegisterActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickLogin(View view) {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
 
 }

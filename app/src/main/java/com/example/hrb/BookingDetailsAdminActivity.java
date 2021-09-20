@@ -53,4 +53,8 @@ public class BookingDetailsAdminActivity extends AppCompatActivity {
     public void onClickBack(View view) {
         finish();
     }
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
 }
