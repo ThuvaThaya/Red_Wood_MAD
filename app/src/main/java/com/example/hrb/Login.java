@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Login extends AppCompatActivity {
-    //login page
+    //this is the login page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
