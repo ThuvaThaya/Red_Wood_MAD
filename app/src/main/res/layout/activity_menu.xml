@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    tools:context=".MenuActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="30dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/txtViewCardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/menu_heading"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+
+            <Button
+                android:id="@+id/btnIdentifyTheCarMake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickBooking"
+                android:text="@string/booking"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickHome"
+                android:text="Home"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickRegister"
+                android:text="Register"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickProfile"
+                android:text="Profile"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+            <Button
+                android:id="@+id/btnCreateRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickCreateRoomCategory"
+                android:text="CreateRoomCategory"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+
+            <Button
+                android:id="@+id/btnEmployeeDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickEmployeeDetails"
+                android:text="Employee Details "
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+            <Button
+                android:id="@+id/btnAddEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickAddEmployee"
+                android:text="Add Employee "
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+
+            <Button
+                android:id="@+id/btnRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickRoomCategoryView"
+                android:text="ROOM"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickLogin"
+                android:text="@string/login"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="197dp" />
+
+            <Button
+                android:id="@+id/btnHints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickPayment"
+                android:text="@string/payment"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="289dp" />
+            <Button
+                android:id="@+id/btnAddRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickAddRoom"
+                android:text="Add room"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="289dp" />
+            <Button
+                android:id="@+id/btnViewRoom1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickViewRoomOne"
+                android:text="View Room 1"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="289dp" />
+
+            <Button
+                android:id="@+id/btnIdentifyCarImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickBookingDetails"
+                android:text="@string/booking_details"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="91dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <Button
+                android:id="@+id/btnadmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickBookingDetailsAdmin"
+                android:text="Booking Details Admin"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="91dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <Button
+                android:id="@+id/btnViewroomadmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickViewRoomAdmin"
+                android:text="View Room Admin"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="91dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <Button
+                android:id="@+id/btnViewroomSingle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="onClickViewRoomSingle"
+                android:text="View Room Single"
+                tools:ignore="UsingOnClickInXml"
+                tools:layout_editor_absoluteX="91dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+
+
+        </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

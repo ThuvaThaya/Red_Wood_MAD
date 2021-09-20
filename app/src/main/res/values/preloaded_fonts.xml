@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/fauna_one</item>
+        <item>@font/lobster_two_bold</item>
+        <item>@font/taviraj_extrabold</item>
+        <item>@font/tenali_ramakrishna</item>
+    </array>
+</resources>

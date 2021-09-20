@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_1"
+    tools:context=".AddRoomActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleMovieRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/add_rooms"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:padding="15dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <EditText
+                        android:id="@+id/room_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/room_type"
+                        android:inputType="text"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:importantForAutofill="no" />
+                    <EditText
+                        android:id="@+id/chkInTimeEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/room_title"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:inputType="time"
+                        android:importantForAutofill="no" />
+                    <EditText
+                        android:id="@+id/chkOutDateEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/room_number"
+                        android:inputType="date"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:textSize="17sp"
+                        android:importantForAutofill="no" />
+                    <EditText
+                        android:id="@+id/chkOutTimeEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/no_of_beds"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:textSize="17sp"
+                        android:importantForAutofill="no"
+                        android:inputType="number" />
+
+
+
+                    <EditText
+                        android:id="@+id/roomTitleEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/max_adults"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:importantForAutofill="no" />
+                    <EditText
+                        android:id="@+id/mobileEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/max_children"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:inputType="number"
+                        android:textSize="16sp"
+                        android:importantForAutofill="no" />
+
+
+                    <TextView
+                        android:id="@+id/noOfRoomsEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/room_facilities"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:textSize="16sp" />
+                    <CheckBox
+                        android:id="@+id/simpleCheckBox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/additonal_beds" />
+
+                    <CheckBox
+                        android:id="@+id/simpleCheckBox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/baby_sitting"/>
+                    <CheckBox
+                        android:id="@+id/simpleCheckBox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free_wifi"/>
+                    <CheckBox
+                        android:id="@+id/simpleCheckBox5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/laundry_services"/>
+
+
+
+                    <EditText
+                        android:id="@+id/EditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/room_fare"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:textSize="16dp"
+                        android:importantForAutofill="no" />
+
+                    <TextView
+                        android:id="@+id/discountEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/room_image"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:inputType="number"
+                        android:textSize="16dp" />
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E8E8E8"
+                        android:text="@string/choose"
+                        android:textColor="@color/black"
+                        app:cornerRadius="20dp"
+                        tools:targetApi="lollipop" />
+
+                    <EditText
+                        android:id="@+id/fareEditTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/description"
+                        android:background="@color/white"
+                        android:textColorHint="@color/black"
+                        android:inputType="numberDecimal"
+                        android:textSize="16dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnCancel1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#F1BB0E"
+                            android:text="@string/add"
+                            android:textColor="@color/white"
+                            app:cornerRadius="20dp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
