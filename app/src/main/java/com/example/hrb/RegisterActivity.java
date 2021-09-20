@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class RegisterActivity extends AppCompatActivity {
+    //This is register activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
