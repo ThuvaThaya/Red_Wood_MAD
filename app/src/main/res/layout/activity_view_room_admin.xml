@@ -28,7 +28,8 @@
             android:textSize="8sp"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/btnback2"
@@ -45,7 +46,7 @@
             app:backgroundTint="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="OnClick" />
+            tools:ignore="OnClick,TouchTargetSizeCheck" />
 
         <ImageView
             android:id="@+id/imageView20"
