@@ -159,8 +159,8 @@
         android:layout_marginBottom="10sp"
         android:layout_weight="1"
         android:backgroundTint="@color/Yellow"
-        android:text="ADD"
         android:onClick="onClickRoomCategoryView"
+        android:text="ADD"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:cornerRadius="60dp" />
