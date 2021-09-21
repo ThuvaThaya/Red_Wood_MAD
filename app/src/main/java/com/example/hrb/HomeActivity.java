@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+//this is home
 public class HomeActivity extends AppCompatActivity {
 
     CardView Room;
