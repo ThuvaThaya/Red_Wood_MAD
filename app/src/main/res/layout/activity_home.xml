@@ -12,7 +12,8 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
         tools:context=".HomeActivity">
 
         <TextView
@@ -60,7 +61,6 @@
             tools:ignore="UnknownIdInLayout" />
 
 
-
         <LinearLayout
             android:id="@+id/linearlayout01"
             android:layout_width="0dp"
@@ -70,10 +70,10 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="151dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="0dp"
             android:orientation="horizontal"
             android:padding="10dp">
@@ -107,8 +107,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="128dp"
                         android:layout_marginTop="10dp"
-                        app:srcCompat="@drawable/employee"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        app:srcCompat="@drawable/employee" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -141,8 +141,8 @@
                         android:layout_height="129dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        app:srcCompat="@drawable/room"
                         android:contentDescription="TODO"
+                        app:srcCompat="@drawable/room"
                         tools:ignore="HardcodedText" />
 
                 </RelativeLayout>
@@ -158,9 +158,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="0dp"
             android:orientation="horizontal"
             android:padding="10dp">
