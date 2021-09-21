@@ -1,6 +1,7 @@
 package com.example.hrb;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,38 +10,38 @@ import android.widget.ImageView;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ImageView Room;
-    ImageView RoomCategory;
-    ImageView Booking;
-    ImageView Employee;
+    CardView Room;
+    CardView RoomCategory;
+    CardView Booking;
+    CardView Employee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Room = findViewById(R.id.ImageRoom);
+        Room = findViewById(R.id.cardRoom);
         Room.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Room();
             }
         });
-        RoomCategory =findViewById(R.id.ImageRoomCategory);
+        RoomCategory =findViewById(R.id.cardRoomCategory);
         RoomCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            RoomCategory();
+                RoomCategory();
             }
         });
-        Booking = findViewById(R.id.ImageBooking);
+        Booking = findViewById(R.id.cardBooking);
         Booking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 BookingAdmin();
             }
         });
-        Employee=findViewById(R.id.ImageEmployee);
+        Employee=findViewById(R.id.cardEmployee);
         Employee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

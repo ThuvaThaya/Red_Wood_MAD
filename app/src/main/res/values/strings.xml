@@ -30,7 +30,6 @@
     <string name="booking_1">Booking 1</string>
     <string name="login">login</string>
     <string name="red_woods">RED WOODS</string>
-    <string name="welcome_to">Welcome to</string>
     <string name="e_mail">E-Mail</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot password?</string>
@@ -39,7 +38,6 @@
     <string name="take_your_first_step_with_us">Take your first step with us</string>
     <string name="category_name">Category Name</string>
     <string name="category">Category</string>
-    <string name="room">Room</string>
     <string name="description">Description</string>
     <string name="title_activity_room_category_view_acitvity">RoomCategoryViewAcitvity</string>
     <string name="prompt_email">Email</string>
@@ -90,7 +88,6 @@
     <string name="join_with">Join with</string>
     <string name="redwoods">RedWoods</string>
     <string name="room_category">Room Category</string>
-    <string name="employee">Employee</string>
     <string name="employee_name">Employee Name</string>
     <string name="employee_id">Employee ID</string>
     <string name="contact_number">Contact Number</string>
@@ -101,6 +98,11 @@
     <string name="email">Email</string>
     <string name="contact_no">Contact No</string>
     <string name="details">Details</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="rew_woods">Rew Woods</string>
+    <string name="employee">Employee</string>
+    <string name="todo">TODO</string>
+    <string name="room">Room</string>
 
 
 </resources>
