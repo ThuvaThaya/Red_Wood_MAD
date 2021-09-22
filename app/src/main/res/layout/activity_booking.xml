@@ -106,6 +106,7 @@
                         android:background="@drawable/edit_round"
                         android:hint="@string/bookingCheckOutTime"
                         android:padding="10dp"
+                        android:inputType="time"
                         android:textColorHint="@color/black"
                         android:textSize="17dp" />
 
