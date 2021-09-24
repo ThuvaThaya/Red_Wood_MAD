@@ -13,8 +13,7 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
         tools:context=".HomeActivity">
 
         <TextView
@@ -62,6 +61,7 @@
             tools:ignore="UnknownIdInLayout" />
 
 
+
         <LinearLayout
             android:id="@+id/linearlayout01"
             android:layout_width="0dp"
@@ -71,10 +71,12 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="155dp"
             android:layout_marginEnd="0dp"
+
             android:layout_marginRight="0dp"
             android:orientation="horizontal"
             android:padding="10dp">
@@ -108,8 +110,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="128dp"
                         android:layout_marginTop="10dp"
-                        android:contentDescription="@string/todo"
-                        app:srcCompat="@drawable/employee" />
+                        app:srcCompat="@drawable/employee"
+                        android:contentDescription="@string/todo" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -142,8 +144,8 @@
                         android:layout_height="129dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:contentDescription="TODO"
                         app:srcCompat="@drawable/room"
+                        android:contentDescription="TODO"
                         tools:ignore="HardcodedText" />
 
                 </RelativeLayout>
@@ -159,9 +161,11 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="0dp"
+
+            android:layout_marginStart="15dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginEnd="15dp"
+
             android:layout_marginRight="0dp"
             android:orientation="horizontal"
             android:padding="10dp">
