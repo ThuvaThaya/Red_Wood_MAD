@@ -103,6 +103,7 @@
     <string name="employee">Employee</string>
     <string name="todo">TODO</string>
     <string name="room">Room</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 
 </resources>

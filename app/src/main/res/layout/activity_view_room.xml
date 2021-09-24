@@ -27,6 +27,7 @@
             android:text="@string/view"
             android:textColor="@color/white"
             android:textSize="8sp"
+            android:onClick="onClickViewRoomSingle"
             app:cornerRadius="20dp"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toTopOf="@+id/room2" />

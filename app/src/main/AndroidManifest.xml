@@ -39,10 +39,10 @@
         <activity
             android:name=".RoomCategoryViewActivity"
             android:exported="true" />
-        <activity
-            android:name=".ui.login.RoomCategoryViewAcitvity"
-            android:exported="true"
-            android:label="@string/title_activity_room_category_view_acitvity" />
+<!--        <activity-->
+<!--            android:name=".ui.login.RoomCategoryViewAcitvity"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/title_activity_room_category_view_acitvity" />-->
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
