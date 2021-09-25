@@ -12,13 +12,11 @@ import android.widget.Toast;
 import com.example.hrb.adapters.AdminBookingAdapter;
 
 import java.util.ArrayList;
-
 public class BookingDetailsAdminActivity extends AppCompatActivity {
     RecyclerView recyclearView;
     DBHelper myDB;
     ArrayList<String > Booking_id, check_in_date, check_in_time,check_out_date,check_out_time, room_type, number_of_room, email, number, discount, fare;
     AdminBookingAdapter adminBookingAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

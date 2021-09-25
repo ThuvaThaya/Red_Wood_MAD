@@ -176,7 +176,6 @@ public class BookingActivity extends AppCompatActivity {
                             fareEditTxt.getText().toString().trim()
 
                     );
-
                 Intent intent = new Intent(getApplicationContext(), PaymentActivity.class);
                 startActivity(intent);
 

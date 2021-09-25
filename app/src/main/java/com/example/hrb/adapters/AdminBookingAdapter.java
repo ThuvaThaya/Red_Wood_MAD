@@ -54,7 +54,6 @@ public class AdminBookingAdapter extends RecyclerView.Adapter<AdminBookingAdapte
         View view = inflater.inflate(R.layout.booking_detail_card, parent, false);
         return new MyViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull AdminBookingAdapter.MyViewHolder holder, int position) {
         holder.Booking_id_txt.setText(String.valueOf(Booking_id.get(position)));
