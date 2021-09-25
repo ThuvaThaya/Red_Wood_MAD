@@ -1,37 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        android:layout_margin="10dp">
+        app:cardElevation="4dp">
 
         <RelativeLayout
             android:id="@+id/deltaRelativeEdit"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="338dp"
             android:background="@color/white">
-
-            <TextView
-                android:id="@+id/bookingTitleTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/lobster_two_bold"
-                android:text="@string/booking_1"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:ignore="RelativeOverlap"
-                android:layout_marginStart="20dp" />
 
             <TextView
                 android:id="@+id/paymentTextView"
@@ -50,45 +36,347 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+
             <TextView
-                android:id="@+id/bookingDescriptionTextView"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_below="@+id/bookingTitleTextView"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/tenali_ramakrishna"
-                android:text="@string/booking_description"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:id="@+id/book_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="207dp"
+                android:layout_marginRight="207dp"
+                android:text="1"
+                android:textColor="#292929"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                android:id="@+id/deleteButton"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_below="@+id/bookingTitleTextView"
+            <TextView
+                android:id="@+id/textemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@android:drawable/ic_menu_delete"
-                android:gravity="end"
-                app:backgroundTint="@android:color/holo_orange_light" />
+                android:layout_marginStart="43dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="162dp"
+                android:layout_marginRight="162dp"
+                android:text="theebanrajuthaya@gmail.com"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.067"
+                app:layout_constraintStart_toEndOf="@+id/book_id"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/editButton"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_below="@+id/bookingTitleTextView"
+            <TextView
+                android:id="@+id/textNumber"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textemail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
+                android:layout_marginStart="43dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="210dp"
+                android:layout_marginRight="210dp"
+                android:text="0766556543"
+                android:textColor="#292929"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.056"
+                app:layout_constraintStart_toEndOf="@+id/book_id"
+                app:layout_constraintTop_toBottomOf="@+id/textemail" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textNumber"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@android:drawable/ic_menu_edit"
-                app:backgroundTint="@android:color/holo_orange_light" />
+                android:text="Check-in-Date - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNumber" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView64"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Check-out-Date - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNumber" />
+
+            <TextView
+                android:id="@+id/chckInDate"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_id"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="64dp"
+                android:layout_marginLeft="64dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="54dp"
+                android:layout_marginRight="54dp"
+                android:layout_toEndOf="@+id/textView62"
+                android:layout_toRightOf="@+id/textView62"
+                android:text="24/09/2021"
+                android:textColor="#292929"
+                app:layout_constraintStart_toEndOf="@+id/textView62"
+                app:layout_constraintTop_toBottomOf="@+id/textNumber" />
+
+            <TextView
+                android:id="@+id/chckOutDate"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chckInTime"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_toEndOf="@+id/textView4"
+                android:layout_toRightOf="@+id/textView4"
+                android:text="24/09/2021"
+                android:textColor="#292929"
+                app:layout_constraintStart_toEndOf="@+id/textView62"
+                app:layout_constraintTop_toBottomOf="@+id/textNumber" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView62"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Check-in-Time - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Check-out-Time - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+            <TextView
+                android:id="@+id/chckInTime"
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chckInDate"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="66dp"
+                android:layout_marginLeft="66dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="124dp"
+                android:layout_marginRight="124dp"
+                android:layout_toEndOf="@+id/textView64"
+                android:layout_toRightOf="@+id/textView64"
+                android:text="03:02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.066"
+                app:layout_constraintStart_toEndOf="@+id/textView64"
+                app:layout_constraintTop_toBottomOf="@+id/chckInDate" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chckOutDate"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="58dp"
+                android:layout_marginLeft="58dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="124dp"
+                android:layout_marginRight="124dp"
+                android:layout_toEndOf="@+id/textView19"
+                android:layout_toRightOf="@+id/textView19"
+                android:text="03:02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.066"
+                app:layout_constraintStart_toEndOf="@+id/textView64"
+                app:layout_constraintTop_toBottomOf="@+id/chckInDate" />
+
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView19"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Room Type - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView64" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView21"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="86dp"
+                android:layout_marginLeft="86dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_toEndOf="@+id/textView66"
+                android:layout_toRightOf="@+id/textView66"
+                android:text="Room type value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.206"
+                app:layout_constraintStart_toEndOf="@+id/textView66"
+                app:layout_constraintTop_toBottomOf="@+id/chckInTime" />
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView66"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Number of Rooms - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView66" />
+
+            <TextView
+                android:id="@+id/noOfRooms"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView65"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="41dp"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="112dp"
+                android:layout_marginRight="112dp"
+                android:layout_toEndOf="@+id/textView67"
+                android:layout_toRightOf="@+id/textView67"
+                android:text="1000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView67"
+                app:layout_constraintTop_toBottomOf="@+id/textView65" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView67"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:text="Discount - "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.052"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView67" />
+
+            <TextView
+                android:id="@+id/textDiscount"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noOfRooms"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="101dp"
+                android:layout_marginLeft="101dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="61dp"
+                android:layout_marginRight="61dp"
+                android:layout_toEndOf="@+id/textView61"
+                android:layout_toRightOf="@+id/textView61"
+                android:text="250"
+                android:textColor="#292929"
+                app:layout_constraintStart_toEndOf="@+id/textView61"
+                app:layout_constraintTop_toBottomOf="@+id/noOfRooms" />
+
+            <TextView
+                android:id="@+id/textView68"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView61"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="14dp"
+                android:text="Fare - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+            <TextView
+                android:id="@+id/textFare"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDiscount"
+                android:layout_alignEnd="@+id/textNumber"
+                android:layout_alignRight="@+id/textNumber"
+                android:layout_marginStart="127dp"
+                android:layout_marginLeft="127dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="-137dp"
+                android:layout_marginRight="-137dp"
+                android:layout_toEndOf="@+id/textView68"
+                android:layout_toRightOf="@+id/textView68"
+                android:text="29750"
+                android:textColor="#292929"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/textView68"
+                app:layout_constraintTop_toBottomOf="@+id/textDiscount" />
+
+
+            <!--            <Button-->
+<!--                android:id="@+id/deleteButton"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_below="@+id/textFare"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:background="@android:drawable/ic_menu_delete"-->
+<!--                android:gravity="end"-->
+<!--                app:backgroundTint="@android:color/holo_orange_light" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/editButton"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_below="@+id/textFare"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="40dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:background="@android:drawable/ic_menu_edit"-->
+<!--                app:backgroundTint="@android:color/holo_orange_light" />-->
 
         </RelativeLayout>
 

@@ -3,37 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_add_employee.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_add_room.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_create_ractivity.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_employee_details.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_home.xml" value="0.33" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_login.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_main.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_menu.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_payment.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_profile.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_register.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/activity_room_category_view.xml" value="0.31203703703703706" />
-        <entry key="..\:/Red_Wood_MAD/app/src/main/res/layout/room_category_card.xml" value="0.31203703703703706" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_add_employee.xml" value="0.264" />
-
-        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_booking.xml" value="0.10185185185185185" />
-
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_add_room.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_booking.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_booking_details.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_booking_details_admin.xml" value="0.23854166666666668" />
-
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_create_ractivity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_employee_details.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_home2.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_home_actrivity.xml" value="0.10925925925925926" />
-        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_payment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_room_category_view.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_view_room.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_view_room_admin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ASUS/Downloads/Hotel-Room-Management-master-editted/Hotel-Room-Management-master/app/src/main/res/layout/activity_view_room_single.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/akeel/AndroidStudioProjects/Hotel-Room-Management-master/app/src/main/res/layout/activity_booking.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/akeel/AndroidStudioProjects/Hotel-Room-Management-master/app/src/main/res/layout/activity_booking_details.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/akeel/AndroidStudioProjects/Hotel-Room-Management-master/app/src/main/res/layout/activity_booking_details_admin.xml" value="0.13020833333333334" />

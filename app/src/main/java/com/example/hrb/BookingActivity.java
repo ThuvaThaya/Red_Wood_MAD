@@ -24,7 +24,7 @@ public class BookingActivity extends AppCompatActivity {
     private Spinner roomTitleEditTxt;
     DBHelper DB;
 
-    String [] room_title ={"BMW","NISSAN","BENZ"};
+    String [] room_title ={"Single", "Double","Triple", "Quad", "King", "Queen"};
     double value;
     int quantity;
     double totalValue;
@@ -73,7 +73,7 @@ public class BookingActivity extends AppCompatActivity {
 
                     Log.d("onItemSelected: ",selectRoomTitle);
                     quantity = Integer.parseInt(noOfRoomsEditTxt.getText().toString());
-                    if(selectRoomTitle.equals("BMW")){
+                    if(selectRoomTitle.equals("Single")){
                         value = 5000;
                         if(quantity > 5){
                             discountValue = (value * 0.05);
@@ -82,7 +82,7 @@ public class BookingActivity extends AppCompatActivity {
                             totalValue = (value * quantity);
                         }
 
-                    }else if(selectRoomTitle.equals("NISSAN")){
+                    }else if(selectRoomTitle.equals("Double")){
                         value = 3000;
                         if(quantity > 5){
                             discountValue = (value * 0.05);
@@ -91,16 +91,50 @@ public class BookingActivity extends AppCompatActivity {
                             totalValue = (value * quantity);
                         }
 
-                    }else if(selectRoomTitle.equals("BENZ")){
+                    }else if(selectRoomTitle.equals("Triple")){
                         value = 10000;
                         if(quantity > 5){
                             discountValue = (value * 0.05);
                             totalValue = (value * quantity) - discountValue;
-                        }else{
+                        }
+                        else{
                             totalValue = (value * quantity);
                         }
 
-                    }else{
+                    }else if(selectRoomTitle.equals("Quad")){
+                        value = 12000;
+                        if(quantity > 5){
+                            discountValue = (value * 0.05);
+                            totalValue = (value * quantity) - discountValue;
+                        }
+                        else{
+                            totalValue = (value * quantity);
+                        }
+
+                    }
+                    else if(selectRoomTitle.equals("King")){
+                        value = 15000;
+                        if(quantity > 5){
+                            discountValue = (value * 0.20);
+                            totalValue = (value * quantity) - discountValue;
+                        }
+                        else{
+                            totalValue = (value * quantity);
+                        }
+
+                    }
+                    else if(selectRoomTitle.equals("Queen")){
+                        value = 12000;
+                        if(quantity > 5){
+                            discountValue = (value * 0.20);
+                            totalValue = (value * quantity) - discountValue;
+                        }
+                        else{
+                            totalValue = (value * quantity);
+                        }
+
+                    }
+                    else{
                         try {
                             throw new Exception("user not selected");
                         } catch (Exception e) {
@@ -143,7 +177,8 @@ public class BookingActivity extends AppCompatActivity {
 
                     );
 
-
+                Intent intent = new Intent(getApplicationContext(), PaymentActivity.class);
+                startActivity(intent);
 
             }
         });
