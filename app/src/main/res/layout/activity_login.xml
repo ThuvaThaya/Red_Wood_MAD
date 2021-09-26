@@ -14,20 +14,20 @@
         android:background="@drawable/login"
         tools:context=".Login">
 
-        <Button
-            android:id="@+id/btnback"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:background="?attr/homeAsUpIndicator"
-            android:onClick="onClickBack"
-            app:backgroundTint="@color/black"
-            tools:ignore="OnClick,UsingOnClickInXml" />
+<!--        <Button-->
+<!--            android:id="@+id/btnback"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:background="?attr/homeAsUpIndicator"-->
+<!--            android:onClick="onClickBack"-->
+<!--            app:backgroundTint="@color/black"-->
+<!--            tools:ignore="OnClick,UsingOnClickInXml" />-->
 
         <TextView
             android:id="@+id/Welcometo"
@@ -139,25 +139,7 @@
             android:textColorHint="@color/black"
             android:textSize="17dp" />
 
-        <Button
-            android:id="@+id/btnLoginadmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btnLogin2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="164dp"
-            android:layout_marginLeft="164dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="10sp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/Yellow"
-            android:onClick="onClickHome"
-            android:text="Login"
-            android:textColor="@color/white"
-            app:cornerRadius="40dp" />
-
-        <Button
+            <Button
             android:id="@+id/btnLogin2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
