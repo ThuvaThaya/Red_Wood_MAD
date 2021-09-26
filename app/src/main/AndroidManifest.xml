@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HRB">
         <activity
+            android:name=".AdminBookingUpdateActivity"
+            android:exported="true" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
@@ -56,9 +59,6 @@
             android:exported="true" />
         <activity
             android:name=".BookingDetailsActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MenuActivity"
             android:exported="true" />
         <activity
             android:name=".PaymentActivity"

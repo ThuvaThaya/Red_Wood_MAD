@@ -2,13 +2,13 @@ package com.example.hrb;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 public class DBHelper extends SQLiteOpenHelper {
+    private static final String TABLE_NAME="Booking_Details";
 
 
     private Context context;
@@ -21,7 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase DB) {
         DB.execSQL("create Table Booking_Details(BookID INTEGER PRIMARY KEY AUTOINCREMENT, check_in_date TEXT, room_title Text, check_in_time TEXT,check_out_time TEXT,check_out_date TEXT, number_of_rooms TEXT, email TEXT, number INTEGER, discount INTEGER, fare INTEGER )");
-        DB.execSQL("create Table Room_Category(Cat_IDINTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, Description TEXT)");
+//        DB.execSQL("create Table Room_Category(Cat_IDINTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, Description TEXT)");
     }
 
     @Override
@@ -34,7 +34,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //Add function for booking details
-    void insertBookingData(String check_in_date, String check_out_date, String check_in_time, String check_out_time, String room_title, String no_of_rooms, String number, String email, String discount, String fare) {
+    void insertBookingData(String check_in_date, String check_out_date, String check_in_time,
+                           String check_out_time, String room_title, String no_of_rooms, String number,
+                           String email, String discount, String fare) {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("check_in_date", check_in_date);
@@ -80,21 +82,56 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-//    public Boolean insertCategory(String name, String Description)
-//    {
-//        SQLiteDatabase DB = this.getWritableDatabase();
-//        ContentValues contentValues = new ContentValues();
-//        contentValues.put("name", name);
-//        contentValues.put("Description", Description);
-//
-//        long res = DB.insert("Room_Category", null,contentValues);
-//        if (res == -1){
-//            return false;
-//        }
-//        else {
-//            return true;
-//        }
-//    }
+    public Boolean insertCategory(String name, String Description)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", name);
+        contentValues.put("Description", Description);
+
+        long res = DB.insert("Room_Category", null,contentValues);
+        if (res == -1){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    void updateBooking(String Booking_id, String check_in_date, String check_in_time, String check_out_date,
+                       String check_out_time, String number_of_room, String email, String number, String room_type,
+                       String discount,String fare){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(check_in_date,check_in_date);
+        cv.put(check_in_time,check_in_time);
+        cv.put(check_out_date,check_out_date);
+        cv.put(check_out_time,check_out_time);
+        cv.put(number_of_room,number_of_room);
+        cv.put(number,number);
+        cv.put(room_type,room_type);
+        cv.put(email,email);
+        cv.put(discount,discount);
+        cv.put(fare,fare);
+
+        long result = db.update("Booking_Details", cv,"COLUMN_ID=?", new String[]{Booking_id});
+        if (result == -1) {
+            Toast.makeText(context,"Failed to Updated", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context,"Successfully Updated", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    void deleteOneRow(String ID){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_NAME, "COLUMN_ID=?", new String[]{ID});
+        if (result == -1) {
+            Toast.makeText(context,"Failed to Deleted", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context,"Successfully Deleted", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
 

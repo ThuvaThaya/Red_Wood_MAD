@@ -104,14 +104,8 @@
     <string name="todo">TODO</string>
     <string name="room">Room</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="EmployeeName">Employee Name</string>
-    <string name="Employeeid">Employee ID</string>
-    <string name="ContactNumber">Contact Number</string>
-    <!--    <string name="gender">Gender</string>-->
-    <string name="NICnumber">NIC Number</string>
-    <!--    <string name="submit">SUBMIT</string>-->
-    <!--    <string name="add">ADD</string>-->
-    <!--    <string name="employee">Employee</string>-->
+    <string name="delete">DELETE</string>
+    <string name="update">UPDATE</string>
 
 
 </resources>
