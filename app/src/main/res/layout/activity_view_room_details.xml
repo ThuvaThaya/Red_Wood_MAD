@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/viewroomadmin"
-    tools:context=".ViewRoomAdmin">
+    android:background="@drawable/view1"
+    tools:context=".ViewRoomActivity">
 
     <Button
         android:id="@+id/btnback"
@@ -14,13 +14,12 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="5dp"
         android:background="?attr/homeAsUpIndicator"
-        android:onClick="onClickAddRoom"
-        app:backgroundTint="@color/Yellow"
+        android:onClick="onClickViewRoomSingle"
+        app:backgroundTint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/Room_Details"
+        android:id="@+id/roomListHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -34,13 +33,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/RoomDetailsList"
+        android:id="@+id/roomList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/Room_Details"
+        app:layout_constraintTop_toBottomOf="@+id/roomListHeading"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:paddingBottom="60dp"
         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
