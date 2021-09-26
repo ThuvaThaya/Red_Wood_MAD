@@ -22,6 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase DB) {
         DB.execSQL("create Table Booking_Details(BookID INTEGER PRIMARY KEY AUTOINCREMENT, check_in_date TEXT, room_title Text, check_in_time TEXT,check_out_time TEXT,check_out_date TEXT, number_of_rooms TEXT, email TEXT, number INTEGER, discount INTEGER, fare INTEGER )");
 //        DB.execSQL("create Table Room_Category(Cat_IDINTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, Description TEXT)");
+        DB.execSQL("create Table Room_Details(RoomID INTEGER PRIMARY KEY AUTOINCREMENT, roomType TEXT, roomTitle Text, roomNumber TEXT,numOfBeds TEXT,numOfAdults TEXT, numOfChildren TEXT, roomFare TEXT, discription TEXT, bed BOOLEAN, babySitting BOOLEAN,wifi BOOLEAN,laundry BOOLEAN,roomImage BLOB )");
     }
 
     @Override
@@ -29,8 +30,47 @@ public class DBHelper extends SQLiteOpenHelper {
         DB.execSQL("drop Table if exists Booking_Details");
         DB.execSQL("drop Table if exists Users");
         DB.execSQL("drop Table if exists Room_Category");
+        DB.execSQL("drop Table if exists Room_Details");
         onCreate(DB);
 
+    }
+
+    //add functions for room add
+    void addRoom(String roomType,String roomTitle,String roomNumber,String numOfBeds,String numOfAdults,String numOfChildren,String roomFare,String discription,Boolean bed,Boolean babySitting,Boolean wifi,Boolean laundry ){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("roomType", roomType);
+        contentValues.put("roomTitle", roomTitle);
+        contentValues.put("roomNumber", roomNumber);
+        contentValues.put("numOfBeds", numOfBeds);
+        contentValues.put("numOfAdults", numOfAdults);
+        contentValues.put("numOfChildren", numOfChildren);
+        contentValues.put("roomFare", roomFare);
+        contentValues.put("discription", discription);
+        contentValues.put("bed", bed);
+        contentValues.put("babySitting", babySitting);
+        contentValues.put("wifi", wifi);
+        contentValues.put("laundry", laundry);
+//        contentValues.put("roomImage", roomImage);
+
+        long result = DB.insert("Room_Details", null, contentValues);
+        if(result==-1) {
+            Toast.makeText(context,"Error occured",Toast.LENGTH_LONG).show();
+        }else {
+            Toast.makeText(context,"room has been added successfully",Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public Cursor getRooms()
+    {
+        String query = "SELECT * FROM Room_Details" ;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query,null);
+        }
+        return cursor;
     }
 
     //Add function for booking details

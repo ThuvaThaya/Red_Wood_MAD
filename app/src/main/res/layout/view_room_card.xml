@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:id="@+id/deltaRelativeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="338dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="207dp"
+                android:layout_marginRight="207dp"
+                android:text="1"
+                android:textColor="#292929"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/room_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="43dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="162dp"
+                android:layout_marginRight="162dp"
+                android:text="Happy Home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.067"
+                app:layout_constraintStart_toEndOf="@+id/room"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/room_type"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_title"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="43dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="210dp"
+                android:layout_marginRight="210dp"
+                android:text="Large Room"
+                android:textColor="#292929"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.056"
+                app:layout_constraintStart_toEndOf="@+id/room"
+                app:layout_constraintTop_toBottomOf="@+id/room_title" />
+
+            <TextView
+                android:id="@+id/room_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_type"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Room Number - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_type" />
+
+            <TextView
+                android:id="@+id/num_of_adults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/num_of_beds"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Number of Adults - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_type" />
+
+            <TextView
+                android:id="@+id/room_number_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="64dp"
+                android:layout_marginLeft="64dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="54dp"
+                android:layout_marginRight="54dp"
+                android:layout_toEndOf="@+id/room_number"
+                android:layout_toRightOf="@+id/room_number"
+                android:text="001"
+                android:textColor="#292929"
+                app:layout_constraintStart_toEndOf="@+id/room_number"
+                app:layout_constraintTop_toBottomOf="@+id/room_type" />
+
+            <TextView
+                android:id="@+id/num_of_adult_field"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/num_of_beds_field"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_toEndOf="@+id/num_of_adults"
+                android:layout_toRightOf="@+id/num_of_adults"
+                android:text="2"
+                android:textColor="#292929"
+                app:layout_constraintStart_toEndOf="@+id/room_number"
+                app:layout_constraintTop_toBottomOf="@+id/room_type" />
+
+            <TextView
+                android:id="@+id/num_of_beds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_number"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="No of Beds - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_number" />
+
+            <TextView
+                android:id="@+id/num_of_children"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/num_of_adults"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Number of Children - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_number" />
+
+            <TextView
+                android:id="@+id/num_of_beds_field"
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_number_field"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="66dp"
+                android:layout_marginLeft="66dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="124dp"
+                android:layout_marginRight="124dp"
+                android:layout_toEndOf="@+id/num_of_beds"
+                android:layout_toRightOf="@+id/num_of_beds"
+                android:text="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.066"
+                app:layout_constraintStart_toEndOf="@+id/num_of_beds"
+                app:layout_constraintTop_toBottomOf="@+id/room_number_field" />
+
+            <TextView
+                android:id="@+id/num_of_children_field"
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/num_of_adult_field"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="58dp"
+                android:layout_marginLeft="58dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="124dp"
+                android:layout_marginRight="124dp"
+                android:layout_toEndOf="@+id/num_of_children"
+                android:layout_toRightOf="@+id/num_of_children"
+                android:text="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.066"
+                app:layout_constraintStart_toEndOf="@+id/num_of_beds"
+                app:layout_constraintTop_toBottomOf="@+id/room_number_field" />
+
+            <TextView
+                android:id="@+id/fare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/num_of_children"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Room Fare Per Night- "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/num_of_beds" />
+
+            <TextView
+                android:id="@+id/fare_field"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/num_of_children_field"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="86dp"
+                android:layout_marginLeft="86dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_toEndOf="@+id/fare"
+                android:layout_toRightOf="@+id/fare"
+                android:text="5000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.206"
+                app:layout_constraintStart_toEndOf="@+id/fare"
+                app:layout_constraintTop_toBottomOf="@+id/num_of_beds_field" />
+
+            <TextView
+                android:id="@+id/disciption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fare"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Description - "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fare" />
+
+            <TextView
+                android:id="@+id/discription_field"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fare_field"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="41dp"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="112dp"
+                android:layout_marginRight="112dp"
+                android:layout_toEndOf="@+id/disciption"
+                android:layout_toRightOf="@+id/disciption"
+                android:text="Very Large room"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/disciption"
+                app:layout_constraintTop_toBottomOf="@+id/fare_field" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/textView61"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/textView67"-->
+            <!--                android:layout_marginLeft="16dp"-->
+            <!--                android:layout_marginTop="13dp"-->
+            <!--                android:text="Discount - "-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.052"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView67" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/textDiscount"-->
+            <!--                android:layout_width="149dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/noOfRooms"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_marginStart="101dp"-->
+            <!--                android:layout_marginLeft="101dp"-->
+            <!--                android:layout_marginTop="12dp"-->
+            <!--                android:layout_marginEnd="61dp"-->
+            <!--                android:layout_marginRight="61dp"-->
+            <!--                android:layout_toEndOf="@+id/textView61"-->
+            <!--                android:layout_toRightOf="@+id/textView61"-->
+            <!--                android:text="250"-->
+            <!--                android:textColor="#292929"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/textView61"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/noOfRooms" />-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/textView68"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/textView61"-->
+            <!--                android:layout_marginStart="16dp"-->
+            <!--                android:layout_marginLeft="16dp"-->
+            <!--                android:layout_marginTop="14dp"-->
+            <!--                android:text="Fare - "-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView61" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/textFare"-->
+            <!--                android:layout_width="139dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/textDiscount"-->
+            <!--                android:layout_alignEnd="@+id/textNumber"-->
+            <!--                android:layout_alignRight="@+id/textNumber"-->
+            <!--                android:layout_marginStart="127dp"-->
+            <!--                android:layout_marginLeft="127dp"-->
+            <!--                android:layout_marginTop="19dp"-->
+            <!--                android:layout_marginEnd="-137dp"-->
+            <!--                android:layout_marginRight="-137dp"-->
+            <!--                android:layout_toEndOf="@+id/textView68"-->
+            <!--                android:layout_toRightOf="@+id/textView68"-->
+            <!--                android:text="29750"-->
+            <!--                android:textColor="#292929"-->
+            <!--                android:textSize="12sp"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/textView68"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textDiscount" />-->
+
+
+            <!--            <Button-->
+            <!--                android:id="@+id/deleteButton"-->
+            <!--                android:layout_width="20dp"-->
+            <!--                android:layout_height="20dp"-->
+            <!--                android:layout_below="@+id/textFare"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginEnd="10dp"-->
+            <!--                android:layout_marginRight="10dp"-->
+            <!--                android:background="@android:drawable/ic_menu_delete"-->
+            <!--                android:gravity="end"-->
+            <!--                app:backgroundTint="@android:color/holo_orange_light" />-->
+
+            <!--            <Button-->
+            <!--                android:id="@+id/editButton"-->
+            <!--                android:layout_width="20dp"-->
+            <!--                android:layout_height="20dp"-->
+            <!--                android:layout_below="@+id/textFare"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginEnd="40dp"-->
+            <!--                android:layout_marginRight="10dp"-->
+            <!--                android:background="@android:drawable/ic_menu_edit"-->
+            <!--                app:backgroundTint="@android:color/holo_orange_light" />-->
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

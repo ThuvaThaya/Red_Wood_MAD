@@ -103,9 +103,27 @@
     <string name="employee">Employee</string>
     <string name="todo">TODO</string>
     <string name="room">Room</string>
-    <string name="title_activity_login">LoginActivity</string>
     <string name="delete">DELETE</string>
     <string name="update">UPDATE</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="EmployeeName">Employee Name</string>
+    <string name="Employeeid">Employee ID</string>
+    <string name="ContactNumber">Contact Number</string>
+    <!--    <string name="gender">Gender</string>-->
+    <string name="NICnumber">NIC Number</string>
+    <string name="RoomTitle">Rooms</string>
+    <string name="Title_room">Room Title</string>
+    <string name="RoomNumber">Room Number</string>
+    <string name="NoBeds">Number of Beds</string>
+    <string name="MaxAdults">Number of Adults</string>
+    <string name="MaxChildren">Number of Children</string>
+    <string name="RoomFare">Room Fare Per Night</string>
+    <string name="Facility">Additional Facilities</string>
+    <string name="ImageRoom">Room Image</string>
+    <string name="RoomDescription">Description</string>
+    <string name="Room_Details">Room Details</string>
+    <string name="RoomTitleView">Room 1</string>
+    <string name="RoomDescriptionView">Room Description</string>
 
 
 </resources>
