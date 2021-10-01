@@ -61,7 +61,6 @@
             tools:ignore="UnknownIdInLayout" />
 
 
-
         <LinearLayout
             android:id="@+id/linearlayout01"
             android:layout_width="0dp"
@@ -110,8 +109,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="128dp"
                         android:layout_marginTop="10dp"
-                        app:srcCompat="@drawable/employee"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        app:srcCompat="@drawable/employee" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -144,8 +143,8 @@
                         android:layout_height="129dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        app:srcCompat="@drawable/room"
                         android:contentDescription="TODO"
+                        app:srcCompat="@drawable/room"
                         tools:ignore="HardcodedText" />
 
                 </RelativeLayout>

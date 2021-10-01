@@ -124,6 +124,8 @@
     <string name="Room_Details">Room Details</string>
     <string name="RoomTitleView">Room 1</string>
     <string name="RoomDescriptionView">Room Description</string>
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
 
 
 </resources>

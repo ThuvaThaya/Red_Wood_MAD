@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/addroom"
-    tools:context=".AddRoomActivity">
+    tools:context=".AdminRoomUpdateActivity">
 
 
     <Button
@@ -174,7 +174,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/additonal_beds"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+
+
+                        />
 
                     <CheckBox
                         android:id="@+id/simpleCheckBox2"
@@ -203,15 +206,7 @@
                         android:text="@string/laundry_services"
                         android:textColor="@color/black" />
 
-                    <ImageView
-                        android:id="@+id/ImageRoom"
-                        android:textStyle="bold"
-                        android:layout_width="fill_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/ImageRoom"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -220,17 +215,19 @@
                         android:orientation="vertical" >
 
 
+
                         <Button
-                            android:id="@+id/btnRoomAdd"
+                            android:id="@+id/update"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="10sp"
                             android:layout_weight="1"
-                            android:backgroundTint="@color/Yellow"
+                            android:backgroundTint="@color/ash"
                             android:onClick="onClickViewRoomAdmin"
-                            android:text="@string/add"
-                            android:textColor="@color/white"
+                            android:text="@string/Edit"
+                            android:textColor="@color/black"
                             app:cornerRadius="20dp" />
+
                     </LinearLayout>
                 </LinearLayout>
 

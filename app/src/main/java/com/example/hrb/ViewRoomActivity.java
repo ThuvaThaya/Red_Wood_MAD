@@ -1,75 +1,107 @@
 package com.example.hrb;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.hrb.AddRoomActivity;
+import com.example.hrb.DBHelper;
+import com.example.hrb.HomeActivity;
+import com.example.hrb.R;
 import com.example.hrb.adapters.AddRoomAdapter;
-import com.example.hrb.models.RoomDetail;
+import com.example.hrb.adapters.AdminAddRoomAdapter;
+import com.example.hrb.adapters.AdminBookingAdapter;
 
 import java.util.ArrayList;
 
 public class ViewRoomActivity extends AppCompatActivity {
-    private ListView roomList;
-    AddRoomAdapter adapter=null;
-    ArrayList<RoomDetail> rooms;
-    DBHelper db;
 
-
-
+    RecyclerView recyclearView1;
+    DBHelper myDB;
+    private ArrayList<String> roomId ,roomType, roomTitle,roomNumber, numOfBeds,
+            numOfAdults,numOfChildren,roomFare,discription ;
+    private ArrayList<Boolean> bed,babySitting,wifi,laundry;
+    AddRoomAdapter addRoomAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_room_details);
+        setContentView(R.layout.activity_view_room);
+        recyclearView1 = findViewById(R.id.recyclerview1);
+        myDB = new DBHelper(ViewRoomActivity.this);
+        roomId = new ArrayList<>();
 
-        Intent intent = getIntent();
-        roomList = findViewById(R.id.roomList);
-        rooms=new ArrayList<>();
-        adapter=new AddRoomAdapter(this,R.layout.view_room_card,rooms);
-        roomList.setAdapter(adapter);
-        db=new DBHelper(this);
-        Cursor cursor=AddRoomActivity.DB.getRooms();
-        rooms.clear();
-        while(cursor.moveToFirst()){
-            try {
-                System.out.println(cursor.getString(1));
-                int id=cursor.getInt(0);
-                String roomType=cursor.getString(1);
-                String roomTitle = cursor.getString(2);;
-                String roomNumber = cursor.getString(3);
-                String numOfBeds = cursor.getString(4);;
-                String numOfAdults = cursor.getString(5);;
-                String numOfChildren = cursor.getString(6);;
-                String roomFare = cursor.getString(7);;
-                String discription = cursor.getString(8);;
-                boolean bed = cursor.getInt(9)>0;;
-                boolean babySitting = cursor.getInt(10)>0;;
-                boolean wifi = cursor.getInt(11)>0;;
-                boolean laundry = cursor.getInt(12)>0;
+        roomType = new ArrayList<>();
+        roomTitle = new ArrayList<>();
+        roomNumber = new ArrayList<>();
+        numOfBeds = new ArrayList<>();
+        numOfAdults = new ArrayList<>();
+        numOfChildren = new ArrayList<>();
 
-                rooms.add(new RoomDetail(id,roomType,roomTitle,roomNumber,numOfBeds,numOfAdults,numOfChildren,roomFare,discription,bed,babySitting,wifi,laundry));
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            adapter.notifyDataSetChanged();
-        }
+        roomFare = new ArrayList<>();
+        discription = new ArrayList<>();
 
+        storeDataInArrays();
+        addRoomAdapter = new AddRoomAdapter(ViewRoomActivity.this,this,roomId,
+                roomType, roomTitle,roomNumber,
+                numOfBeds, numOfAdults, numOfChildren, roomFare, discription);
 
+        recyclearView1.setAdapter(addRoomAdapter);
+        recyclearView1.setLayoutManager(new LinearLayoutManager(ViewRoomActivity.this));
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1){
+            recreate();
+        }
+    }
+    void storeDataInArrays(){
+        Cursor cursor = myDB.getRooms();
+        if(cursor.getCount() == 0){
+            Toast.makeText(this,"No data", Toast.LENGTH_SHORT).show();
+        }else{
+            while (cursor.moveToNext()){
+
+
+
+
+
+                roomId.add(cursor.getString(0));
+                roomType.add(cursor.getString(1));
+                roomTitle.add(cursor.getString(2));
+                roomNumber.add(cursor.getString(3));
+                numOfBeds.add(cursor.getString(4));
+
+                numOfAdults.add(cursor.getString(5));
+                numOfChildren.add(cursor.getString(6));
+                roomFare.add(cursor.getString(7));
+                discription.add(cursor.getString(8));
+
+            }
+        }
+    }
+
+
     public void onClickBack(View view) {
         finish();
     }
-    public void onClickViewRoomSingle(View view) {
-        Intent intent = new Intent(this, ViewRoomSingle.class);
+    public void onClickAddRoom(View view) {
+        Intent intent = new Intent(this, AddRoomActivity.class);
         startActivity(intent);
     }
-
     public void onClickHome(View view) {
         Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+    public void onClickBook(View view) {
+        Intent intent = new Intent(this, BookingActivity.class);
         startActivity(intent);
     }
 }

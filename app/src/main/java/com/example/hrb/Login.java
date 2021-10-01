@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
     }
     public void onClickViewRoomOne(View view) {
-        Intent intent = new Intent(this, ViewRoomActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
     public void onClickRegister(View view) {

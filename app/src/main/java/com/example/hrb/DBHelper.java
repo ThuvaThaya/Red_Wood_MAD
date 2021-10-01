@@ -22,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase DB) {
         DB.execSQL("create Table Booking_Details(BookID INTEGER PRIMARY KEY AUTOINCREMENT, check_in_date TEXT, room_title Text, check_in_time TEXT,check_out_time TEXT,check_out_date TEXT, number_of_rooms TEXT, email TEXT, number INTEGER, discount INTEGER, fare INTEGER )");
 //        DB.execSQL("create Table Room_Category(Cat_IDINTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, Description TEXT)");
-        DB.execSQL("create Table Room_Details(RoomID INTEGER PRIMARY KEY AUTOINCREMENT, roomType TEXT, roomTitle Text, roomNumber TEXT,numOfBeds TEXT,numOfAdults TEXT, numOfChildren TEXT, roomFare TEXT, discription TEXT, bed BOOLEAN, babySitting BOOLEAN,wifi BOOLEAN,laundry BOOLEAN,roomImage BLOB )");
+        DB.execSQL("create Table Room_Details(RoomID INTEGER PRIMARY KEY AUTOINCREMENT, roomType TEXT, roomTitle Text, roomNumber TEXT,numOfBeds TEXT,numOfAdults TEXT, numOfChildren TEXT, roomFare TEXT, discription TEXT, bed BOOLEAN, babySitting BOOLEAN,wifi BOOLEAN,laundry BOOLEAN )");
     }
 
     @Override
@@ -51,13 +51,48 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("babySitting", babySitting);
         contentValues.put("wifi", wifi);
         contentValues.put("laundry", laundry);
-//        contentValues.put("roomImage", roomImage);
+
 
         long result = DB.insert("Room_Details", null, contentValues);
         if(result==-1) {
             Toast.makeText(context,"Error occured",Toast.LENGTH_LONG).show();
         }else {
             Toast.makeText(context,"room has been added successfully",Toast.LENGTH_LONG).show();
+        }
+    }
+
+    void updateRoom(String roomId,String roomType,String roomTitle,String roomNumber,String numOfBeds,String numOfAdults,String numOfChildren,String roomFare,String discription,Boolean bed,Boolean babySitting,Boolean wifi,Boolean laundry ){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("roomType", roomType);
+        contentValues.put("roomTitle", roomTitle);
+        contentValues.put("roomNumber", roomNumber);
+        contentValues.put("numOfBeds", numOfBeds);
+        contentValues.put("numOfAdults", numOfAdults);
+        contentValues.put("numOfChildren", numOfChildren);
+        contentValues.put("roomFare", roomFare);
+        contentValues.put("discription", discription);
+        contentValues.put("bed", bed);
+        contentValues.put("babySitting", babySitting);
+        contentValues.put("wifi", wifi);
+        contentValues.put("laundry", laundry);
+
+
+        long result = DB.update("Room_Details",  contentValues,"RoomID=?",new String[]{roomId});
+        if(result==-1) {
+            Toast.makeText(context,"Error occured",Toast.LENGTH_LONG).show();
+        }else {
+            Toast.makeText(context,"room has been updated successfully",Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void deleteRoom(String roomId){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete("Room_Details", "RoomID=?", new String[]{roomId});
+        if (result == -1) {
+            Toast.makeText(context,"Failed to Delete", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context,"Successfully Deleted", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -70,6 +105,7 @@ public class DBHelper extends SQLiteOpenHelper {
         if(db != null){
             cursor = db.rawQuery(query,null);
         }
+        System.out.println(cursor.getCount());
         return cursor;
     }
 
@@ -163,7 +199,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    void deleteOneRow(String ID){
+    public void deleteOneRow(String ID){
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, "COLUMN_ID=?", new String[]{ID});
         if (result == -1) {
@@ -174,4 +210,3 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 }
-

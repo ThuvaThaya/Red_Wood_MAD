@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HRB">
         <activity
+            android:name=".AdminRoomUpdateActivity"
+            android:exported="true" />
+        <activity
             android:name=".AdminBookingUpdateActivity"
             android:exported="true" />
         <activity

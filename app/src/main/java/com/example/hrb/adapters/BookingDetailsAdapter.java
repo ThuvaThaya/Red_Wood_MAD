@@ -45,7 +45,7 @@ public class BookingDetailsAdapter extends BaseAdapter {
         TextView bookingTitletTextView = (TextView) convertView.findViewById(R.id.bookingTitleTextView);
         TextView bookingDescriptionTextView = (TextView) convertView.findViewById(R.id.bookingDescriptionTextView);
         TextView paymentDescriptionTextView = (TextView) convertView.findViewById(R.id.paymentTextView);
-        Button editBtn = (Button) convertView.findViewById(R.id.editButton);
+//        Button editBtn = (Button) convertView.findViewById(R.id.editButton);
         Button deleteBtn = (Button) convertView.findViewById(R.id.deleteButton);
 
         BookingDetail bookingDetail = bookingDetailsList.get(position);
@@ -53,12 +53,12 @@ public class BookingDetailsAdapter extends BaseAdapter {
         bookingDescriptionTextView.setText(bookingDetail.getBookingDescription());
         paymentDescriptionTextView.setText(bookingDetail.getPaymentDescription());
 
-        editBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // logic of edit button click
-            }
-        });
+//        editBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // logic of edit button click
+//            }
+//        });
 
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override

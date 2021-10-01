@@ -1,46 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<androidx.constraintlayout.widget.ConstraintLayout -->
+<!-- -->
+<!--    android:id="@+id/colo"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@drawable/view1"-->
+<!--    tools:context=".BookingDetailsAdminActivity">-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
     android:background="@drawable/viewroomadmin"
-    tools:context=".ViewRoomAdmin">
-
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ViewRoomAdmin"
+    >
     <Button
         android:id="@+id/btnback"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="5dp"
         android:background="?attr/homeAsUpIndicator"
-        android:onClick="onClickAddRoom"
+        android:onClick="onClickHome"
         app:backgroundTint="@color/Yellow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="UsingOnClickInXml" />
+
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="345dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/Yellow"
+        android:onClick="onClickAddRoom"
+        android:text="@string/add"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:cornerRadius="20dp" />
 
     <TextView
         android:id="@+id/Room_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginRight="130dp"
         android:fontFamily="@font/lobster_two_bold"
         android:text="@string/Room_Details"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="25sp" />
 
-    <ListView
-        android:id="@+id/RoomDetailsList"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/Room_Details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:paddingBottom="60dp"
-        />
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Room_Details"
+            tools:ignore="NotSibling" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

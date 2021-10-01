@@ -1,8 +1,5 @@
 package com.example.hrb.adapters;
 
-
-
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -26,7 +23,7 @@ import com.example.hrb.R;
 
 import java.util.ArrayList;
 
-public class AddRoomAdapter extends RecyclerView.Adapter<AddRoomAdapter.MyViewHolder> {
+public class AdminAddRoomAdapter extends RecyclerView.Adapter<AdminAddRoomAdapter.MyViewHolder> {
     private Context context;
 
     private ArrayList roomId ;
@@ -44,8 +41,8 @@ public class AddRoomAdapter extends RecyclerView.Adapter<AddRoomAdapter.MyViewHo
     private  ArrayList wifi ;
     private  ArrayList laundry;
     Activity activity;
-
-    public AddRoomAdapter(Activity activity, Context context, ArrayList roomId, ArrayList roomType, ArrayList roomTitle, ArrayList roomNumber, ArrayList numOfBeds, ArrayList numOfAdults, ArrayList numOfChildren, ArrayList roomFare, ArrayList discription){
+    DBHelper Db;
+    public AdminAddRoomAdapter(Activity activity, Context context, ArrayList roomId, ArrayList roomType, ArrayList roomTitle, ArrayList roomNumber, ArrayList numOfBeds, ArrayList numOfAdults, ArrayList numOfChildren, ArrayList roomFare, ArrayList discription){
         this.activity=activity;
         this.context = context;
         this.roomId = roomId;
@@ -64,9 +61,9 @@ public class AddRoomAdapter extends RecyclerView.Adapter<AddRoomAdapter.MyViewHo
 
     @NonNull
     @Override
-    public AddRoomAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdminAddRoomAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.view_room_admin_card, parent, false);
+        View view = inflater.inflate(R.layout.view_room_card, parent, false);
         return new MyViewHolder(view);
     }
     @Override
@@ -84,8 +81,54 @@ public class AddRoomAdapter extends RecyclerView.Adapter<AddRoomAdapter.MyViewHo
         holder.fare_field.setText(String.valueOf(roomFare.get(position)));
         holder.discription_field.setText(String.valueOf(discription.get(position)));
 //       holder.mainLayout.setOnClickListener((view) -> {
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Db=new DBHelper(context);
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Delete ?");
+                builder.setMessage("Are you sure you want to delete ?");
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        DBHelper myDB = new DBHelper(context);
+                        myDB.deleteRoom(String.valueOf(roomId.get(position)));
+                        activity.finish();
+
+                    }
+                });
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.create().show();
+            }
+
+        });
+        holder.btnUpdate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, AdminRoomUpdateActivity.class);
+                intent.putExtra("room", String.valueOf(roomId.get(position)));
+                intent.putExtra("room_title", String.valueOf(roomTitle.get(position)));
+                intent.putExtra("room_type", String.valueOf(roomType.get(position)));
+                intent.putExtra("room_number_field", String.valueOf(roomNumber.get(position)));
+                intent.putExtra("num_of_beds_field", String.valueOf(numOfBeds.get(position)));
+
+                intent.putExtra("num_of_adult_field", String.valueOf(numOfAdults.get(position)));
+                intent.putExtra("num_of_children_field", String.valueOf(numOfChildren.get(position)));
+                intent.putExtra("fare_field", String.valueOf(roomFare.get(position)));
+                intent.putExtra("discription_field", String.valueOf(discription.get(position)));
+                activity.startActivityForResult(intent, 1);
+            }
 
 
+
+
+        });
     }
 
     @Override
@@ -97,7 +140,7 @@ public class AddRoomAdapter extends RecyclerView.Adapter<AddRoomAdapter.MyViewHo
 
         TextView room, room_title,room_type, room_number_field,num_of_adult_field, num_of_beds_field, num_of_children_field, fare_field, discription_field;
         LinearLayout mainLayout;
-
+        Button btnDelete,btnUpdate;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -113,7 +156,8 @@ public class AddRoomAdapter extends RecyclerView.Adapter<AddRoomAdapter.MyViewHo
             fare_field = itemView.findViewById(R.id.fare_field);
             discription_field = itemView.findViewById(R.id.discription_field);
             mainLayout = itemView.findViewById(R.id.mainLayout);
-
+            btnDelete=itemView.findViewById(R.id.btnDelete);
+            btnUpdate=itemView.findViewById(R.id.btnUpdate);
         }
     }
 }

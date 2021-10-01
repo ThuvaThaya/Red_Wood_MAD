@@ -15,7 +15,9 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     android:background="@drawable/viewroomadmin"
-    app:layout_constraintTop_toTopOf="parent">
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ViewRoomActivity"
+    >
     <Button
         android:id="@+id/btnback"
         android:layout_width="35dp"
@@ -28,6 +30,21 @@
         app:backgroundTint="@color/Yellow"
         tools:ignore="UsingOnClickInXml" />
 
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="345dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/Yellow"
+        android:onClick="onClickBook"
+        android:text="@string/book_now"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:cornerRadius="20dp" />
 
     <TextView
         android:id="@+id/Room_Details"
@@ -51,7 +68,7 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
+            android:id="@+id/recyclerview1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="70dp"
@@ -63,5 +80,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
-
     <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

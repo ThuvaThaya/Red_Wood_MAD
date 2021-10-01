@@ -24,8 +24,8 @@ public class AddRoomActivity extends AppCompatActivity {
 
     EditText roomType,roomTitle,roomNumber,numOfBeds,numOfAdults, numOfChildren, roomFare,discription ;
     CheckBox bed,babySitting,wifi,laundry;
-    ImageView roomImage;
-    Button choose,add;
+    //    ImageView roomImage;
+    Button add;
     public  static DBHelper DB;
 
     final int REQUEST_CODE_GALLERY=999;
@@ -49,22 +49,22 @@ public class AddRoomActivity extends AppCompatActivity {
         babySitting =  (CheckBox) findViewById(R.id.simpleCheckBox2);
         wifi =  (CheckBox) findViewById(R.id.simpleCheckBox3);
         laundry =  (CheckBox) findViewById(R.id.simpleCheckBox4);
-        roomImage =  (ImageView) findViewById(R.id.ImageRoom);
-        choose =  (Button) findViewById(R.id.btnChoose);
+//        roomImage =  (ImageView) findViewById(R.id.ImageRoom);
+//        choose =  (Button) findViewById(R.id.btnChoose);
         add =  (Button) findViewById(R.id.btnRoomAdd);
 
 
         //
-        choose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityCompat.requestPermissions(
-                        AddRoomActivity.this,
-                        new String[]  {Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                        PackageManager.PERMISSION_GRANTED
-                );
-            }
-        });
+//        choose.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ActivityCompat.requestPermissions(
+//                        AddRoomActivity.this,
+//                        new String[]  {Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE},
+//                        PackageManager.PERMISSION_GRANTED
+//                );
+//            }
+//        });
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,7 +97,7 @@ public class AddRoomActivity extends AppCompatActivity {
                 babySitting.setChecked(false);
                 wifi.setChecked(false);
                 laundry.setChecked(false);
-
+                onClickViewRoom();
 
 
 
@@ -156,7 +156,11 @@ public class AddRoomActivity extends AppCompatActivity {
         finish();
     }
     public void onClickViewRoomAdmin(View view) {
-        Intent intent = new Intent(this, ViewRoomActivity.class);
+        Intent intent = new Intent(this, ViewRoomAdmin.class);
+        startActivity(intent);
+    }
+    public void onClickViewRoom() {
+        Intent intent = new Intent(this, ViewRoomAdmin.class);
         startActivity(intent);
     }
 }
